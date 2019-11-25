@@ -1,0 +1,20 @@
+{
+  "name": "views",
+  "version": "1.0.0",
+  "description": "scraper-mongodb",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ridvanceko/scraper-mongodb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ridvanceko/scraper-mongodb/issues"
+  },
+  "homepage": "https://github.com/ridvanceko/scraper-mongodb#readme"
+}
