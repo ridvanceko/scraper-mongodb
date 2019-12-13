@@ -1,10 +1,13 @@
 var request = require("request");
 var cheerio = require("cheerio");
+let axios = require("axios");
 
-var scrape = function (cb)
+var scrape = function (cb){
 
-request("https://www.bbc.com/", function (err, res, body){
-  var $ = cheerio.load(body);
+axios.get("https://www.bbc.com/").then(function(response){
+
+
+  var $ = cheerio.load(reponse.data);
   var articles = [];
 
   $(".cd").each(function(i, element){
@@ -24,9 +27,11 @@ request("https://www.bbc.com/", function (err, res, body){
       };
       articles.push(dataToAdd);
     }
+  
   });
   cb(articles);
 });
+}
 
 
 module.exports = scrape;

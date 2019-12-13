@@ -1,7 +1,8 @@
-var scrape = require("../script.scrape");
+var scrape = require("../scripts/scrape");
 
 var headlinesController = require("../controllers/headlines");
 var notesController = require("../controllers/notes");
+var router = require("router");
 
 
 module.exports = function(router) {
@@ -11,7 +12,7 @@ module.exports = function(router) {
   router.get("/saved", function(req, res){
     res.render("saved");
   });
-}
+
 
 router.get("/api/fetch", function(req, res) {
   headlinesController.fetch(function(err, docs){
@@ -72,4 +73,5 @@ router.post("api/notes", function(req,res){
   notesController.save(req.body, function(data){
     res.json(data);
   });
-});
+}); 
+}
