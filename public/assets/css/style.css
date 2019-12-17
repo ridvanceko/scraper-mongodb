@@ -12,7 +12,7 @@ footer{
 bottom: 0;
 width: 100%;
 height: 70px;
-background-color: aqua;
+background-color: rgb(164, 252, 252);
 }
 
 .jumbotron{
@@ -21,7 +21,7 @@ background-color: aqua;
   height: 500px;
   font-family: 'Courier New', Courier, monospace;
   padding: 0;
-  box-shadow: 10px 5px 20px 2px lightseagreen;
+  box-shadow: 10px 5px 20px 2px rgb(54, 255, 245);
 }
 
 .jumbotron .overlay {
@@ -31,7 +31,7 @@ background-color: aqua;
   bottom: 0;
   left: 0;
   z-index: auto;
-  background: linear-gradient(#333, black);
+  background: linear-gradient(rgb(75, 75, 75), rgb(32, 32, 32));
   opacity: 0.7;
 }
 
