@@ -4,7 +4,7 @@ let axios = require("axios");
 
 var scrape = function (cb){
 console.log("inside scrape.js");
-axios.get("http://www.nytimes.com/").then(function(response){
+axios.get("http://www.bbc.com/").then(function(response){
 
 
   var $ = cheerio.load(response.data);
