@@ -11,14 +11,15 @@ module.exports = {
       // console.log("data");
       var articles = data;
       for (var i=0; i = articles.length; i++) {
-        articles[i].date = makeDate;
+        articles[i].date = makeDate();
         articles[i].saved = false;
 
       }
-      console.log(data);
+      console.log(articles);
+      console.log("headline: ", Headline)
       Headline.collection.insertMany(articles, {ordered:false}, function(error, docs){
         cb(error, docs);
-      });
+      })
     });
   },
   delete: function(query, cb) {

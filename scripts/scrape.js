@@ -3,14 +3,15 @@ var cheerio = require("cheerio");
 let axios = require("axios");
 
 var scrape = function (cb){
-console.log("inside scrape.js");
-axios.get("http://www.bbc.com/").then(function(response){
+// console.log("inside scrape.js");
+request("http://www.bbc.com/", function(err, res, body){
+  var $ = cheerio.load(body);
 
+var articles = [];
 
-  var $ = cheerio.load(response.data);
-  var articles = [];
+  
 
-  $(".cd").each(function(i, element){
+  $(".theme-summary").each(function(i, element){
 
     var head = $(this).children("media__title").text().trim();
 
